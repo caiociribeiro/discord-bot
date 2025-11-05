@@ -22,6 +22,7 @@ Apos adicionar o bot ao seu servidor ([discord para desenvolvedores](https://dis
     ```
 
 ## Comandos
-- `!blackjack start` - Inicia um novo jogo de Blackjack;
-- `!blackjack hit` - Pede uma carta adicional; 
-- `!blackjack stand` - Fica com as cartas atuais e encerra o jogo;
+- Blackjack:
+  - `!blackjack start` - Inicia um novo jogo de Blackjack;
+  - `!blackjack hit` - Pede uma carta adicional; 
+  - `!blackjack stand` - Fica com as cartas atuais e encerra o jogo;
