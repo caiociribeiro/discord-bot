@@ -3,6 +3,8 @@ defmodule DiscordBot.Consumer do
 
   alias Nostrum.Api
   alias DiscordBot.Command.Blackjack
+  alias DiscordBot.Command.Lyrics
+  alias DiscordBot.Command.Exchange
 
   def handle_event({:MESSAGE_CREATE, msg, _ws_state}) do
     case msg.content do
@@ -19,13 +21,19 @@ defmodule DiscordBot.Consumer do
   end
 
   defp dispatch_command(content, msg) do
-    if String.starts_with?(content, "!blackjack") do
-      parts = String.split(content)
-      sub_command = Enum.at(parts, 1)
+    cond do
+      String.starts_with?(content, "!blackjack") ->
+        parts = String.split(content)
+        sub_command = Enum.at(parts, 1)
+        Blackjack.handle_command(sub_command, msg)
 
-      Blackjack.handle_command(sub_command, msg)
-    else
-      :ignore
+      String.starts_with?(content, "!lyrics") ->
+        Lyrics.handle_command(content, msg)
+
+       String.starts_with?(content, "!exchange") ->
+        Exchange.handle_command(content, msg)
+
+      true -> :ignore
     end
   end
 

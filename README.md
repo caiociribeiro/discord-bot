@@ -26,3 +26,9 @@ Apos adicionar o bot ao seu servidor ([discord para desenvolvedores](https://dis
   - `!blackjack start` - Inicia um novo jogo de Blackjack;
   - `!blackjack hit` - Pede uma carta adicional; 
   - `!blackjack stand` - Fica com as cartas atuais e encerra o jogo;
+
+- Lyrics:
+  - `!lyrics "<nome do artista>" "<nome da música>"` - Busca a letra da música especificada;
+
+- Exchange:
+  - `!exchange <quantia> <moeda de origem> <moeda de destino>` - Converte a quantia especificada da moeda de origem para a moeda de destino;
