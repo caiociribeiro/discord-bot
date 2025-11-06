@@ -32,3 +32,6 @@ Apos adicionar o bot ao seu servidor ([discord para desenvolvedores](https://dis
 
 - Exchange:
   - `!exchange <quantia> <moeda de origem> <moeda de destino>` - Converte a quantia especificada da moeda de origem para a moeda de destino;
+
+- Yugioh:
+  - `!yugioh` - Busca e exibe uma carta elatória de Yu-Gi-Oh!.

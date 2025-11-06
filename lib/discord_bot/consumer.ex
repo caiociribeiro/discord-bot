@@ -5,6 +5,7 @@ defmodule DiscordBot.Consumer do
   alias DiscordBot.Command.Blackjack
   alias DiscordBot.Command.Lyrics
   alias DiscordBot.Command.Exchange
+  alias DiscordBot.Command.Yugioh
 
   def handle_event({:MESSAGE_CREATE, msg, _ws_state}) do
     case msg.content do
@@ -30,8 +31,11 @@ defmodule DiscordBot.Consumer do
       String.starts_with?(content, "!lyrics") ->
         Lyrics.handle_command(content, msg)
 
-       String.starts_with?(content, "!exchange") ->
+      String.starts_with?(content, "!exchange") ->
         Exchange.handle_command(content, msg)
+
+      content == "!yugioh" ->
+        Yugioh.handle_command(msg)
 
       true -> :ignore
     end
