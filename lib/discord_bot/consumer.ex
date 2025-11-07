@@ -6,6 +6,7 @@ defmodule DiscordBot.Consumer do
   alias DiscordBot.Command.Lyrics
   alias DiscordBot.Command.Exchange
   alias DiscordBot.Command.Yugioh
+  alias DiscordBot.Command.Shortener
 
   def handle_event({:MESSAGE_CREATE, msg, _ws_state}) do
     case msg.content do
@@ -33,6 +34,9 @@ defmodule DiscordBot.Consumer do
 
       String.starts_with?(content, "!exchange") ->
         Exchange.handle_command(content, msg)
+
+      String.starts_with?(content, "!url") ->
+        Shortener.handle_command(content, msg)
 
       content == "!yugioh" ->
         Yugioh.handle_command(msg)

@@ -35,3 +35,15 @@ Apos adicionar o bot ao seu servidor ([discord para desenvolvedores](https://dis
 
 - Yugioh:
   - `!yugioh` - Busca e exibe uma carta aleatória de Yu-Gi-Oh!.
+
+- URL Shortener:
+  - `!url <url>` - Encurta a URL especificada.
+
+
+## APIs Utilizadas
+- [Deck of Cards API](https://deckofcardsapi.com/) - Deck of Cards;
+- [Lyrics.ovh API](https://lyricsovh.docs.apiary.io/#) - Simple API to retrieve the lyrics of a song;
+- [Currency API](https://github.com/fawazahmed0/exchange-api) - Free Currency Exchange Rates API with 150+ Currencies & No Rate Limits;
+- [Yu-Gi-Oh! API](https://db.ygoprodeck.com/api-guide/) - Yu-Gi-Oh! API by YGOPRODeck;
+- [URL Shortener API](https://ulvis.net/developer.html) - Free URL shortener offers a powerful API to interact with other sites.
+
